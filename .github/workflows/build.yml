@@ -21,11 +21,10 @@ jobs:
           
       - run: dir .
       - run: dir ./vcpkg
-      - run: dir ./vcpkg/vcpkg
-      - run: dir ./vcpkg/vcpkg/vcpkg
+      - run: dir ./vcpkg/packages
 
       - name: Upload bin directory
         uses: actions/upload-artifact@v4
         with:
           name: vcpkg-bin
-          path: vcpkg/vcpkg/vcpkg
+          path: vcpkg/packages
