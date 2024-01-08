@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vcpkg-bin
-          path: vcpkg/bin
+          path: vcpkg/vcpkg/vcpkg/bin
