@@ -5,6 +5,10 @@
       "default-features": false
     },
     {
+      "name": "libjxl",
+      "default-features": false
+    },
+    {
       "name": "libwebp",
       "default-features": false,
       "features": [
@@ -12,6 +16,7 @@
         "simd",
         "unicode"
       ]
-    }
+    },
+    "libheif"
   ]
 }
