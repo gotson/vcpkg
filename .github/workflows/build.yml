@@ -20,10 +20,10 @@ jobs:
         env:
           VCPKG_DEFAULT_TRIPLET: x64-windows
 
-      - run: Compress-Archive ./vcpkg vcpkg.zip
+      - run: Compress-Archive ./vcpkg/packages vcpkg_packages.zip
 
-      - name: Upload vcpkg
+      - name: Upload vcpkg packages
         uses: actions/upload-artifact@v4
         with:
           name: vcpkg
-          path: vcpkg.zip
+          path: vcpkg_packages.zip
