@@ -3,6 +3,15 @@
     {
       "name": "libarchive",
       "default-features": false
+    },
+    {
+      "name": "libwebp",
+      "default-features": false,
+      "features": [
+        "libwebpmux",
+        "simd",
+        "unicode"
+      ]
     }
   ]
 }
