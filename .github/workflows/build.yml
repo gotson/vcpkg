@@ -1,4 +1,4 @@
-name: Release
+name: Build
 
 on:
   push:
@@ -9,10 +9,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup anew (or from cache) vcpkg (and does not build any package)
+      - name: vcpkg install
         uses: lukka/run-vcpkg@v11
         with:
           vcpkgGitCommitId: c8696863d371ab7f46e213d8f5ca923c4aef2a00
@@ -20,3 +18,9 @@ jobs:
           vcpkgJsonGlob: '**/vcpkg.json'
         env:
           VCPKG_DEFAULT_TRIPLET: x64-windows
+
+      - name: Upload bin directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: vcpkg-bin
+          path: vcpkg/bin
