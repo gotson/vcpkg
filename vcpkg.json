@@ -1,5 +1,8 @@
 {
   "dependencies": [
-    "libarchive"
+    {
+      "name": "libarchive",
+      "default-features": false
+    }
   ]
 }
