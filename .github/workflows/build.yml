@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup anew (or from cache) vcpkg (and does not build any package)
+        uses: lukka/run-vcpkg@v11
+        with:
+          runVcpkgInstall: true
+          vcpkgJsonGlob: '**/vcpkg.json'
+        env:
+          VCPKG_DEFAULT_TRIPLET: x64-windows
