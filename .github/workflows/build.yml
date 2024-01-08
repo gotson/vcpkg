@@ -18,13 +18,9 @@ jobs:
           vcpkgJsonGlob: '**/vcpkg.json'
         env:
           VCPKG_DEFAULT_TRIPLET: x64-windows
-          
-      - run: dir .
-      - run: dir ./vcpkg
-      - run: dir ./vcpkg/packages
 
       - name: Upload bin directory
         uses: actions/upload-artifact@v4
         with:
           name: vcpkg-bin
-          path: vcpkg/packages
+          path: vcpkg
