@@ -17,6 +17,8 @@
         "unicode"
       ]
     },
-    "libheif"
+    "libheif",
+    "aom",
+    "dav1d"
   ]
 }
