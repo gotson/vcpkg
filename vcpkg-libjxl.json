@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    {
+      "name": "libjxl",
+      "default-features": false
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 {
   "dependencies": [
-    "aom",
-    "dav1d",
-    "libde265",
-    "x265",
-    "libheif"
+    {
+      "name": "libwebp",
+      "default-features": false,
+      "features": [
+        "all"
+      ]
+    }
   ]
 }
