@@ -1,24 +1,9 @@
 {
   "dependencies": [
-    {
-      "name": "libarchive",
-      "default-features": false
-    },
-    {
-      "name": "libjxl",
-      "default-features": false
-    },
-    {
-      "name": "libwebp",
-      "default-features": false,
-      "features": [
-        "libwebpmux",
-        "simd",
-        "unicode"
-      ]
-    },
-    "libheif",
     "aom",
-    "dav1d"
+    "dav1d",
+    "libde265",
+    "x265",
+    "libheif"
   ]
 }
